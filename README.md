@@ -121,3 +121,11 @@ For example, if you use ```postfix```, you should change ```/etc/postfix/main.cf
 
     mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128 172.17.0.0/16
     inet_interfaces = 127.0.0.1,172.17.42.1
+
+### Proxy Settings
+For servers sitting behind a firewall, users may experince an inability to properly download the needed packages. If this is the case, users will need to be sure to set the proxy server settings within the Dockker file.
+
+```
+ENV http_proxy proxy-address:port 
+ENV https_proxy proxy-address:port
+```
